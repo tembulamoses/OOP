@@ -58,3 +58,12 @@ class Student(SchoolMember):
     def detail(self):
         return SchoolMember.detail(self), 'Marks: "{:d}"'.format(self.marks)
         
+        
+        
+s = Student('swaroop', 20, 75)
+t = Teacher('alphayo', 30, 1000)
+
+l = [s, t]
+
+for member in l:
+    print(member.detail())
