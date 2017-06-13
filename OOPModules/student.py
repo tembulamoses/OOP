@@ -1,20 +1,19 @@
 from school_member import SchoolMember
-
-class Teacher(SchoolMember):
-    '''Represents a teacher.'''
-
-    age_description = 'Adult'
-
-    def __init__(self, name, age, salary):
+class Student(SchoolMember):
+    '''Represents a student.'''
+    
+    age_description = 'minor'
+    
+    def __init__(self, name, age, marks):
         SchoolMember.__init__(self, name, age)
-        self.salary = salary
+        self.marks = marks
 
     def member_type(self):
-        return 'Teacher'
+        return 'Student'    
 
     def detail(self):
-        
-        return SchoolMember.detail(self), 'Salary: "{:d}"'.format(self.salary)
+        return SchoolMember.detail(self), 'Marks: "{:d}"'.format(self.marks)
+
 
 s = Student('swaroop', 20, 75)
 t = Student('alphayo', 19, 82)
