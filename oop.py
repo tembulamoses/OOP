@@ -23,3 +23,21 @@ class SchoolMember:
         """"Return a string representing the type of vehicle this is."""
         pass
 
+
+
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+
+    age_description = 'Adult'
+
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+
+    def member_type(self):
+        return 'Teacher'
+
+    def detail(self):
+        
+        return SchoolMember.detail(self), 'Salary: "{:d}"'.format(self.salary)
